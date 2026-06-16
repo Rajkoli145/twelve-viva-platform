@@ -126,11 +126,20 @@ npm install --prefix frontend && cd frontend && npm run dev
 
 Open **Admin** at `/admin`, **Student Viva** at `/student`, **Professor Review** at `/review`.
 
-### Demo viva
+### Demo credentials
 
-`python backend/seed_demo.py` inserts a ready-to-take demo exam (based on this project) and prints the login: exam **Demo Viva — TWELVE Platform**, roll **DEMO01**, one-time code **VIVA-DEMO-2026**. Re-run to reset it. It loads the repo-root `.env` so the code hash matches the running server.
+#### Student login (to take the seeded exam):
+* **Exam:** `Demo Viva — TWELVE Platform`
+* **Roll number:** `DEMO01`
+* **One-time code:** `VIVA-DEMO-2026`
 
-The first staff account is created from the Admin or Review login screen via **First setup**, or by setting `TWELVE_BOOTSTRAP_ADMIN_EMAIL` / `TWELVE_BOOTSTRAP_ADMIN_PASSWORD` before first launch. Once any staff user exists, the bootstrap endpoint is disabled.
+#### Staff / Admin login (to access `/admin` and `/review` panels):
+* **Email:** `admin@example.com`
+* **Password:** `adminpassword123`
+*(These are automatically bootstrapped from the default values in your `.env`)*
+
+`python backend/seed_demo.py` inserts this ready-to-take demo exam and prints the login details. Re-run it to reset. It loads the repo-root `.env` so the code hash matches the running server. Once any staff user exists, the bootstrap endpoint is disabled.
+
 
 ---
 
